@@ -1,0 +1,21 @@
+.side-bar-wrapper {
+  align-self: flex-start;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  width: 15%;
+  border: 1px solid #373737;
+  background-color: #03191e;
+  padding: 5px;
+}
+
+.options-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav.options-wrapper {
+  height: 50%;
+  align-self: flex-start;
+}
