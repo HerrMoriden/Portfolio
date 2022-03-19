@@ -1,0 +1,18 @@
+#blob1,#blob2,
+#blob3, .hidden-paths {
+  visibility: hidden;
+}
+
+svg {
+  height: 600px;
+  width: 600px;
+}
+
+.svg-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 500px;
+  width: 500px;
+  z-index: 10;
+}

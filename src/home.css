@@ -1,0 +1,9 @@
+.main-wrapper {
+  background: linear-gradient(0.25turn, #031918, #0abfbc);
+}
+
+.blob-container {
+    height: 100%;
+    width: 100%;
+    margin: auto auto;
+}

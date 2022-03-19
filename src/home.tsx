@@ -1,10 +1,17 @@
+import './home.css';
 import Sidebar from './components/sidebar';
+import FancyBlob from './components/fancyBlob'
 
 function Home() {
   return (
-    <div className="flex-container">
+    <main className="flex-container">
       <Sidebar />
-    </div>
+      <div className="flex-container main-wrapper">
+        <div className="blob-container">
+          <FancyBlob />
+        </div>
+      </div>
+    </main>
   );
 }
 

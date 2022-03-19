@@ -1,21 +1,44 @@
+.sidebar-container {
+  width: auto;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: #373737 1px solid;
+}
+
 .side-bar-wrapper {
   align-self: flex-start;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 100vh;
-  width: 15%;
-  border: 1px solid #373737;
+  width: 150px;
   background-color: #03191e;
-  padding: 5px;
+}
+
+.logo-container {
+  width: auto;
+  height: 150px;
+  margin: 10px 5px;
+  border: white 1px solid;
 }
 
 .options-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
 }
 
 nav.options-wrapper {
   height: 50%;
   align-self: flex-start;
+}
+
+.nav-el {
+  background-color: #373737;
+  height: 50px;
+  width: 90%;
+  margin: 10px;
 }
