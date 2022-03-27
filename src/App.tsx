@@ -1,12 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import FancyBg from './components/fancyBg';
 import Home from './home';
 
 function App() {
   return (
     <>
-      <Home></Home>
+      <FancyBg />
+
+      {/*  <Home />
+       */}
     </>
   );
 }

@@ -6,10 +6,10 @@ import './fancyBlob.css';
 
 function FancyBlob() {
   const targetBlob = 'targetBlob';
-  const dur = 1500;
   let Paths = BlobPaths;
 
   useEffect(() => {
+
     // Keep first path as starting point
     const startPath = Paths.shift();
     Paths = shuffle(Paths);
@@ -18,22 +18,21 @@ function FancyBlob() {
     // Create an array of Params for KUTE.fromTo function
     let tweenObjs = Paths.map((p, i) => {
       let nextPath;
-      if (i == Paths.length - 1) {
+      if (i === Paths.length - 1) {
         // TargetPath of last has to be the first for looping
         nextPath = Paths[0];
       } else {
         nextPath = Paths[i + 1];
       }
 
-      let rnd = Math.round(Math.random() * 10);
-
       return [
         '#' + targetBlob,
         { path: p },
         { path: nextPath },
         {
-          easing: 'easingCubicInOut',
-          duration: rnd % 2 == 0 ? dur * 1.3 : dur * 0.8,
+          easing: 'Sinusoidal',
+          duration: 1000,
+          morphPrecision: 1,
         },
       ];
     });
@@ -46,7 +45,7 @@ function FancyBlob() {
 
     // Chain Tween Objects together
     tweenList.forEach((tween, i, twList) => {
-      if (i == twList.length - 1) {
+      if (i === twList.length - 1) {
         // The last one has to be chained to the first to loop
         tween.chain(twList[0]);
       } else {
